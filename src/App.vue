@@ -22,6 +22,10 @@ export default {
     Navigation },
   name: 'app',
   created: function () {
+   if (axios.defaults.headers.common['Authorization'] == undefined){
+      var theToken = localStorage.getItem('user-token');
+      axios.defaults.headers.common['Authorization'] = theToken
+   }
     if (this.$store.getters.isAuthenticated) {
       this.$store.dispatch(USER_REQUEST)
     }
