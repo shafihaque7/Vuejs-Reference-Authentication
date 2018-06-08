@@ -19,7 +19,8 @@
             }
          },
          mounted () {
-            
+            var theToken = localStorage.getItem('user-token');
+            axios.defaults.headers.common['Authorization'] = theToken
             axios
                .get('http://aws.techthatinterest.com/api/contact')
                .then(response => {
