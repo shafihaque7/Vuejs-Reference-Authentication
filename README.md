@@ -5,6 +5,7 @@
 
 
 [Demo](https://vue-auth-example.netlify.com) of this repo.
+This code is here for any projects that does jwt authentication with local storage. 
 
 
 
